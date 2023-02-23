@@ -16,6 +16,11 @@
         android:theme="@style/Theme.Minutesapp"
         tools:targetApi="31">
         <activity
+            android:name=".CreateMinuteActivity"
+            android:exported="false"
+            android:label="@string/title_activity_create_minute"
+            android:theme="@style/Theme.Minutesapp.NoActionBar" />
+        <activity
             android:name=".HomeActivity"
             android:exported="false" />
         <activity
@@ -26,7 +31,8 @@
             android:exported="false" />
         <activity
             android:name=".MainActivity"
-            android:exported="true">
+            android:exported="true"
+            android:theme="@style/Theme.Minutesapp.NoActionBar" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

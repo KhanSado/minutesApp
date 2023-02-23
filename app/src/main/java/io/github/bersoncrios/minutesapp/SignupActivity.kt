@@ -1,5 +1,6 @@
 package io.github.bersoncrios.minutesapp
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
@@ -37,6 +38,7 @@ class SignupActivity : AppCompatActivity() {
                     Log.d("TAG", "createUserWithEmail:success")
                     val user = auth.currentUser
                     updateUI(user)
+                    startActivity(Intent(this, LoginActivity::class.java))
                 } else {
                     Log.w("TAG", "createUserWithEmail:failure", task.exception)
                     Toast.makeText(baseContext, "Authentication failed.",
